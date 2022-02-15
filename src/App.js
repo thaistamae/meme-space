@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react"
+import {Form} from './components/Form'
+import { MdOutlineAddBox } from 'react-icons/md';
+import './App.css'
+
 
 function App() {
+  const [isFormVisible, setisFormVisible] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <button className="addButton" onClick={() => setisFormVisible(true)}><MdOutlineAddBox className="addButton"/></button>        
+      {isFormVisible ? <Form closeForm={setisFormVisible}/> : null}
+
+
     </div>
   );
 }

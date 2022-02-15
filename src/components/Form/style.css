@@ -1,0 +1,177 @@
+button{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+div{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+
+.formBackground{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.formCloseButton{
+    width: 100%;
+    background-color: rgba(0,0,0, 0.3);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 0px;
+}
+
+.closeButton{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    outline: none;
+    color: white;   
+}
+
+.formContainer1{
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 0;
+}
+
+.formContainer2{
+    width: 700px;
+    height: 450px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 0;
+}
+
+.titleOrganize{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 0 15px 0 15px;
+    font-size: 14px;
+}
+
+.textButton{
+    background-color: white;
+    border: black;
+    outline: none;
+    height: 100%;
+    color: #0095f6;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.textButtonDisabled{
+    background-color: white;
+    border: black;
+    outline: none;
+    height: 100%;
+    color: lightgrey;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.formInputs{
+    display: flex;
+    flex-direction: column;    
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding: 0 15px 0 15px;
+}
+
+
+.formInputs2{
+    display: flex;
+    flex-direction: column;    
+    justify-content: flex-start;
+    width: 400px;
+    margin-top: 20px;
+    padding: 0 0 0 15px;
+}
+
+
+.step3{
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 15px 0 15px;
+}
+
+.profilePicture{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profilePicture2{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0 10px 0 10px;
+}
+
+.profileStep3{
+    display:flex;
+}
+
+label{
+    padding-bottom: 7px;
+}
+
+.inputDescription{
+    margin-bottom: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+    border: lightgray;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+
+}
+
+input{
+    margin-bottom: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+    border: lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.buttonPublish{
+    height:30px;
+    width:100px;
+    
+}
+
+.arrowButton{
+    background-color: white;
+    border: black;
+    outline: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: black;
+}
+
+.image{
+    width: 320px;
+    height: 320px;
+}
+
+
+.obrigatorio{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    font-size: 10px;
+}
