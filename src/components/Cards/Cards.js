@@ -1,11 +1,6 @@
 import React from "react";
-import {InlineShareButtons} from 'sharethis-reactjs';
 import styles from "./Cards.module.css";
 import { LikeButton } from "@lyket/react";
-
-
-
-<InlineShareButtons/>
 
 function Cards(props) {
   return (
@@ -20,7 +15,7 @@ function Cards(props) {
 			    </div>
 			    <div>
 					<a href = "https://api.whatsapp.com/send?text=">
-					<img src={props.share} className={styles.dot} alt=""/>
+					<img src="../../assets/images/share.png" className={styles.dot} alt=""/>
 					</a>
 			   </div>
 			</div>
@@ -38,7 +33,7 @@ function Cards(props) {
 					/>
 				</div>	
 				<div className={styles.right}>
-					<img src={props.bookmark} alt=""/>
+					<img src="../../assets/images/bookmark.png" alt=""/>
 				</div>
 			</div>
 				
@@ -48,7 +43,7 @@ function Cards(props) {
 				<div className={styles.userImg}>
 					<img src={props.user} className={styles.cover} alt=""	/>
 				</div>
-				<input type="text" className={styles.text} placeholder={props.coment}/>
+				<input type="text" className={styles.text} placeholder="Adicionar comentário"/>
 			</div>
 			<h5 className={styles.postTime}>4 hours ago</h5>
 		</div>
