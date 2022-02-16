@@ -1,11 +1,7 @@
 import React from "react";
-import {InlineShareButtons} from 'sharethis-reactjs';
 import styles from "./Cards.module.css";
 import { LikeButton } from "@lyket/react";
 
-
-
-<InlineShareButtons/>
 
 function Cards(props) {
   return (
