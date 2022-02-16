@@ -1,20 +1,17 @@
-import {useState} from "react"
-import {Form} from './components/Form'
-import { MdOutlineAddBox } from 'react-icons/md';
+import { Route, Routes } from 'react-router-dom';
 import './App.css'
+import Home from './pages/Home/Home';
+
 
 
 function App() {
-  const [isFormVisible, setisFormVisible] = useState(false)
-
-  return (
-    <div>
-
-      <button className="addButton" onClick={() => setisFormVisible(true)}><MdOutlineAddBox className="addButton"/></button>        
-      {isFormVisible ? <Form closeForm={setisFormVisible}/> : null}
+  
+return (
+  <Routes>
+     <Route path='/' element={<Home/>} /> 
+  </Routes>
 
 
-    </div>
   );
 }
 
