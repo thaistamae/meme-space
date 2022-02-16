@@ -37,9 +37,9 @@ export function Form({ closeForm }){
         local:"",
         description:"",
         comments: "",
-        comment: "",
+        coment: "Adicionar comentário",
         heart: 0,
-        cards:"",
+        bg:"",
         category:"",
         likes: 0
     })
@@ -56,9 +56,9 @@ export function Form({ closeForm }){
             local:"",
             description:"",
             comments: "",
-            comment: "",
+            coment: "Adicionar comentário",
             heart: 0,
-            cards:"",
+            bg:"",
             category:"",
             likes: 0
         })
@@ -125,15 +125,15 @@ export function Form({ closeForm }){
                                 <button type="button" className={styles.arrowButton} onClick={() => changeToStep1()}><HiOutlineArrowLeft size={30}/></button>
                                 <h3>Escolha o seu meme</h3>
                                 {/*O botão de avançar só funciona quando os campos obrigatórios estão preenchidos*/}
-                                {(meme.cards) ? 
+                                {(meme.bg) ? 
                                 <button type="button" className={styles.textButton} onClick={() => changeToStep3()}>Avançar</button>:
                                 <button type="button" className={styles.textButtonDisabled} onClick={() => alertToFill()}>Avançar</button>}
                             </section>
                             <section className={styles.formInputs}>
-                                <label htmlFor={styles.cards}></label>
-                                {meme.cards ? <img className={styles.cards} src={meme.cards} alt="" onError={imageAlert}/> : null}
+                                <label htmlFor="bg"></label>
+                                {meme.bg ? <img className={styles.cards} src={meme.bg} alt="" onError={imageAlert}/> : null}
                             
-                                <input id="cards" name="cards" value={meme.cards} onChange={handleChange} placeholder="Cole o link do seu meme aqui *"/>
+                                <input id="bg" name="bg" value={meme.bg} onChange={handleChange} placeholder="Cole o link do seu meme aqui *"/>
                             </section>
                             <section className={styles.obrigatorio}>   
                                     <p>* Campo obrigatório</p>
@@ -155,7 +155,7 @@ export function Form({ closeForm }){
                                 <button type="button" className={styles.textButtonDisabled} >Compartilhar</button> }
                             </section> 
                             <section className={styles.step3}>
-                                {meme.cards ? <img className={styles.cards2} src={meme.cards} alt=""/> : null}
+                                {meme.bg ? <img className={styles.cards2} src={meme.bg} alt=""/> : null}
                             
                         
                                 <section className={styles.formInputs2}>   
