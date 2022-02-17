@@ -36,9 +36,9 @@ function Navbar() {
                     
                             <input type="checkbox" name="" id="" className="btn"/>  
                             <div className={style.list}>  
-                                <li> <Link to="/meme"> Memes</Link></li>
+                                {/*<li> <Link to="/meme"> Memes</Link></li>
                                 <li> <Link to="/meme/turma">Turma</Link> </li>
-                                <li><Link to="/meme/externo">Externo</Link></li>
+                                <li><Link to="/meme/externo">Externo</Link></li>*/}
                             </div>  
                         </div>  
                     </div>    
