@@ -10,9 +10,12 @@
     background-color: white;
 }
 
+
 .iconOrganize{
     display: flex;
     justify-content: space-around;
+    padding: 20px;
+    font-size: 24px;
 }
 
 .icon{
@@ -26,3 +29,9 @@
     height: 40px;
 }
 
+.profiles{
+    border-radius: 14px;
+    background-color:grey;
+    padding: 20px;
+
+}

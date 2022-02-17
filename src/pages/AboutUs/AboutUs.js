@@ -1,17 +1,18 @@
-import styles from "./Footer.module.css"
+import styles from "./AboutUs.module.css"
 import {BsGithub} from 'react-icons/bs';
 import {BsLinkedin} from 'react-icons/bs';
 
-export function Footer() {
+export default function AboutUs() {
  
     return (
       <>
   
-        <footer className={styles.footerOrganize}>
+        <div className={styles.footerOrganize}>
 
-            <section>
+            <section className={styles.profiles}>
                 <p>MemeSpace developed by</p>
-                <section className={styles.profileOrganize}>
+                <hr></hr>
+                <section>
                     <p>Rita Viana</p>
                     <article className={styles.iconOrganize}>
                         <a className={styles.icon} href="https://example.com"><BsGithub /></a>
@@ -31,7 +32,7 @@ export function Footer() {
             </section>
 
 
-        </footer>
+        </div>
       </>
     );
   }

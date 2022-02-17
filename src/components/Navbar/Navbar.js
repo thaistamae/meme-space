@@ -19,8 +19,8 @@ function Navbar() {
                             <div className={style.logo}></div>
 
                              <ul>
-                                 <li><Link to="/"> <i class="fas fa-search"></i></Link></li>
-                                 <li><Link to="/"> <i class="fas fa-user"></i></Link></li>
+                                 <li><Link to="/"> <i className="fas fa-search"></i></Link></li>
+                                 <li><Link to="/"> <i className="fas fa-user"></i></Link></li>
                              </ul>
                         </div>
                     </div>
