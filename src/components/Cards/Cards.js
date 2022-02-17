@@ -3,11 +3,15 @@ import { LikeButton } from "@lyket/react";
 
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Cards(props) {
   const [comentarios, setComentarios] = useState({ comments: [] });
+  
   let printDate;
+
+
+
   function formatDate(dateStr) {
     const monthPtBr = [
       "JANEIRO",
@@ -51,6 +55,8 @@ function Cards(props) {
       .put(`https://ironrest.herokuapp.com/memes/${props.id}`, comentarios)
       .then(() => {
         console.log("fezPush");
+        props.postedState(true);
+        console.log(props.postedState)
       })
       .catch((error) => console.log(error));
   };
@@ -108,7 +114,7 @@ function Cards(props) {
           </div>
 
           <form onSubmit={handleSubmit}>
-            <Link to={`/add-comment/${props.id}`}>
+            
               <input
                 type="text"
                 className={styles.text}
@@ -116,7 +122,7 @@ function Cards(props) {
                 name="comments"
                 onChange={handleChange}
               />
-            </Link>
+            
             <button type="submit">add</button>{" "}
           </form>
         </div>

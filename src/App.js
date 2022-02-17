@@ -11,8 +11,8 @@ return (
   <div>
   
     <Routes>
-      <Route path='/' element={<Home />} />  
-      <Route path="/add-comment/:id" element={<CommentCard />} />
+      <Route path='/' element={<CommentCard />} />  
+      {/*<Route path="/add-comment" element={<CommentCard />} />*/}
       <Route path="/add-post" element={<Form />} />
       <Route path="/about-us" element={<AboutUs />} />
     </Routes>

@@ -2,9 +2,11 @@ import axios from "axios";
 import {useState, useEffect} from 'react';
 import styles from '../Form/Form.module.css';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
+import {useNavigate} from 'react-router-dom';
 
 export default function Form(){
-    
+    const navigate = useNavigate()
+
     // Há 3 passos para concluir o preenchimento formulário e fazer uma nova publicação
     // Passo 1: contém as informações de quem está publicando - Foto do Usuário e Nome
     const [step1, setStep1Visible] = useState(true)
@@ -90,6 +92,7 @@ export default function Form(){
         await event.preventDefault();
         await axios.post("https://ironrest.herokuapp.com/memes", meme);
         clearMeme();
+        navigate("/")
         }catch (error) {
             console.error(error);
         }
