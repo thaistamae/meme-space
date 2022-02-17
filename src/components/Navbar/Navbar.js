@@ -1,38 +1,55 @@
 import { Link } from "react-router-dom";
 import {useState} from "react"
-import {Form} from '../Form/Form'
+import Form from '../Form/Form'
 import { MdOutlineAddBox } from 'react-icons/md';
-import styles from "./Style/Navbar.css"
+import style from "../Navbar/Navbar.module.css"
+
 
 function Navbar() {
 
     const [isFormVisible, setisFormVisible] = useState(false)
   
     return (
-      <>
-  
-  <section className={styles.app}>
-  <aside className={styles.sidebar}>
-         <header>
-        Menu
-      </header>
-    <nav className={styles.sidebarNav}>
- 
-      <ul>
-        <li><Link to="/"> Home </Link></li>
-        <li> <button className="addButton" onClick={() => setisFormVisible(true)}><MdOutlineAddBox className="addButton"/></button>        
-      {isFormVisible ? <Form closeForm={setisFormVisible}/> : null}</li>
-        
-        <li> <Link to="/meme"> Memes</Link></li>
-        <li> <Link to="/meme/turma">Turma</Link> </li>
-        <li><Link to="/meme/externo">Externo</Link></li>
-      </ul>
-    </nav>
-  </aside>
-</section>
-  
-  
-      </>
+                <div className={style.wrapper}>
+                
+                    <div className={style.topNavbar}>
+                        <div className={style.hamburger}></div>
+
+                        <div className={style.topMenu}>
+                            <div className={style.logo}></div>
+
+                             <ul>
+                                 <li><Link to="/"> <i class="fas fa-search"></i></Link></li>
+                                 <li><Link to="/"> <i class="fas fa-user"></i></Link></li>
+                             </ul>
+                        </div>
+                    </div>
+                    
+                    <div className={style.sidebar}>
+                        <ul>
+                            <li><Link to="/"> Home </Link></li>
+                            <li><Link to="/add-post"> Add New Posty <button className="addButton" onClick={() => setisFormVisible(true)}><MdOutlineAddBox className="addButton"/></button>        
+                            {isFormVisible ? <Form closeForm={setisFormVisible}/> : null}</Link></li>  
+                        </ul>
+                      
+                        <div className={style.container}>  
+                    
+                            <input type="checkbox" name="" id="" class="btn"/>  
+                            <div className={style.list}>  
+                                <li> <Link to="/meme"> Memes</Link></li>
+                                <li> <Link to="/meme/turma">Turma</Link> </li>
+                                <li><Link to="/meme/externo">Externo</Link></li>
+                            </div>  
+                        </div>  
+                    </div>    
+                
+                   <div className={style.mainContainer}> 
+                   
+                   
+                   
+                   
+                   {/*Colocar o conteudo para ficar no site aqui */}</div> 
+                </div>
     );
   }
 

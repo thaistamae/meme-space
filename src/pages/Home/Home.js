@@ -34,7 +34,7 @@ export function Home() {
 
         {/*renderizar cada elemento da array Card*/}
         {cards
-          .map((card) => {
+          .map((card) => { 
             return (
               <Cards
                 key={card._id}
@@ -46,6 +46,7 @@ export function Home() {
                 bg={card.bg}
                 category={card.category}
                 likes={card.likes}
+                id={card._id}
               />
             );
           })}
