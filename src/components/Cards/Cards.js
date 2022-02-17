@@ -1,9 +1,7 @@
 import styles from "./Cards.module.css";
 import { LikeButton } from "@lyket/react";
-
-import { Link } from "react-router-dom";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Cards(props) {
   const [comentarios, setComentarios] = useState({ comments: [] });
