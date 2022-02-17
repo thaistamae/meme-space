@@ -49,6 +49,8 @@ function CommentCard(props) {
             likes={card.likes}
             id={card._id}
             postedState={setPosted}
+            local={card.local}
+            currentTime={card.currentTime}
           />
         );
       })}
