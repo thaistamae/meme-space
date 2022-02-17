@@ -47,6 +47,7 @@ export function Home() {
                 category={card.category}
                 likes={card.likes}
                 id={card._id}
+                local={card.local}
               />
             );
           })}
