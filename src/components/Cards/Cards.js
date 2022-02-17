@@ -1,9 +1,45 @@
-import React from "react";
 import styles from "./Cards.module.css";
 import { LikeButton } from "@lyket/react";
 
+import { Link} from "react-router-dom";
+
 
 function Cards(props) {
+
+	let printDate;
+	function formatDate(dateStr) {
+    
+		const monthPtBr = [
+			"JANEIRO",
+			"FEVEREIRO",
+			"MARÇO",
+			"ABRIL",
+			"MAIO",
+			"JUNHO",
+			"JULHO",
+			"AGOSTO",
+			"SETEMBRO",
+			"NOVEMBRO",
+			"DEZEMBRO",
+		];
+	
+		const date = new Date(dateStr);
+		const day = date.getDate();
+		const month = date.getMonth();
+		const year = date.getFullYear();
+		const hour = date.getHours();
+		const minutes = date.getMinutes();
+		
+			printDate = `${hour}:${minutes} - ${day} DE ${monthPtBr[month]} DE ${
+				year}`;
+			return printDate;
+		} 
+
+		let formattedDate = formatDate(props.currentTime)
+		console.log(formattedDate)
+		
+		
+
   return (
 	  <>
 		<div className={styles.card}>
@@ -40,13 +76,18 @@ function Cards(props) {
 				
 			<h4 className={styles.message}> <b>{props.name}</b> {props.description}</h4>
 			<h4 className={styles.comments}>{props.comments}</h4>
-			<div className={styles.addComments}>
+			<div className={styles.addComments}> 
 				<div className={styles.userImg}>
 					<img src={props.user} className={styles.cover} alt=""	/>
 				</div>
-				<input type="text" className={styles.text} placeholder="Adicionar comentário"/>
+				
+				<form onSubmit={props.handleSubmit}>
+				<Link to={`/add-comment/${props.id}`}>
+				<input type="text" className={styles.text} placeholder="Adicionar comentário" name="comments" onChange={props.handleChange}/>
+				<button type="submit" >add</button> </Link>
+				</form>
 			</div>
-			<h5 className={styles.postTime}>4 hours ago</h5>
+			<h5 className={styles.postTime}>{formattedDate}</h5>
 		</div>
 	</>
   );

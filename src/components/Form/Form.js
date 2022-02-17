@@ -1,9 +1,9 @@
 import axios from "axios";
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import styles from '../Form/Form.module.css';
-import { CgClose } from 'react-icons/cg';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
-export function Form({ closeForm }){
+
+export default function Form(){
     
     // Há 3 passos para concluir o preenchimento formulário e fazer uma nova publicação
     // Passo 1: contém as informações de quem está publicando - Foto do Usuário e Nome
@@ -36,12 +36,14 @@ export function Form({ closeForm }){
         name:"",
         local:"",
         description:"",
-        comments: "",
+        comments: [],
         coment: "Adicionar comentário",
         heart: 0,
         bg:"",
         category:"",
-        likes: 0
+        likes: 0,
+        userImg: [],
+        currentTime: "",
     })
     // Função para salvar no objeto as informações preenchidas no formulário     
     function handleChange(event){
@@ -55,21 +57,39 @@ export function Form({ closeForm }){
             name:"",
             local:"",
             description:"",
-            comments: "",
+            comments: [],
             coment: "Adicionar comentário",
             heart: 0,
             bg:"",
             category:"",
-            likes: 0
+            likes: 0,
+            userImg: [],
+            currentTime: "",
         })
     }
+
+    //Incluir Data 
+
+    async function createTime() {
+    return setMeme({...meme, currentTime: new Date()});
+    }
+    
+    async function invoke(){
+    await createTime()
+    await console.log(meme.currentTime)
+    }
+
+    useEffect(() => {
+        createTime();
+    }, [])
+
     // Função para subir o objeto da publicação no banco de dados, limpar o objeto e fechar o formulário
     async function handleSubmit (event){
         try{
+        await invoke();    
         await event.preventDefault();
         await axios.post("https://ironrest.herokuapp.com/memes", meme);
         clearMeme();
-        closeForm(false);
         }catch (error) {
             console.error(error);
         }
@@ -82,11 +102,10 @@ export function Form({ closeForm }){
     function imageAlert() {
         window.alert('Por favor, insira um link de imagem válido.');
     }
+    
+
     return(
         <div>
-            <div className={styles.formCloseButton}>   
-            <button className={styles.closeButton} onClick={() => closeForm(false)}><CgClose size={40} className={styles.closeButton}/></button>
-            </div>
             <div className={styles.formBackground}>
                 <div>
                     <form onSubmit={handleSubmit}>
@@ -173,11 +192,7 @@ export function Form({ closeForm }){
                                     <select id="category" name="category" className={styles.selectInput} value={meme.category} onChange={handleChange}>
                                         <option value=""></option>
                                         <option value="Turma-65">Turma-65</option>
-                                        <option value="Javascript">Javascript</option>
-                                        <option value="React">React</option>
-                                        <option value="CSS">CSS</option>
-                                        <option value="CSS">HTML</option>
-                                        <option value="CSS">MongoDB</option>
+                                        <option value="Javascript">Geral</option>
                                     </select>
                                     
                                 </section>  
