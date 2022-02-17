@@ -19,8 +19,8 @@ function Navbar() {
                             <div className={style.logo}></div>
 
                              <ul>
-                                 <li><Link to="/"> <i class="fas fa-search"></i></Link></li>
-                                 <li><Link to="/"> <i class="fas fa-user"></i></Link></li>
+                                 <li><Link to="/"> <i className="fas fa-search"></i></Link></li>
+                                 <li><Link to="/"> <i className="fas fa-user"></i></Link></li>
                              </ul>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ function Navbar() {
                       
                         <div className={style.container}>  
                     
-                            <input type="checkbox" name="" id="" class="btn"/>  
+                            <input type="checkbox" name="" id="" className="btn"/>  
                             <div className={style.list}>  
                                 <li> <Link to="/meme"> Memes</Link></li>
                                 <li> <Link to="/meme/turma">Turma</Link> </li>

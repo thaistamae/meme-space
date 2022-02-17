@@ -7,25 +7,29 @@ function CommentCard(props) {
   const [cards, setCards] = useState([]);
 
   const [comentarios, setComentarios] = useState({ comments: [] });
-
+  const [posted, setPosted] = useState(false);
   console.log(comentarios)
 
   // Pegar os dados dos cards no banco de dados e trazer para a array cards
 
   useEffect(() => {
+    
+
     async function fetchCards() {
       try {
         const result = await axios.get("https://ironrest.herokuapp.com/memes");
         setCards([...result.data.reverse()]);
         setComentarios({ ...result.data.comments });
+        setPosted(false)
+        console.log(posted)
       } catch (error) {
         console.error(error);
       }
     }
 
     fetchCards();
-  }, [setCards]);
-
+  }, [posted]);
+  console.log(setPosted)
   return (
     <div>
       <Navbar />
@@ -44,6 +48,7 @@ function CommentCard(props) {
             category={card.category}
             likes={card.likes}
             id={card._id}
+            postedState={setPosted}
           />
         );
       })}
