@@ -1,0 +1,28 @@
+.footerOrganize{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.profileOrganize{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.iconOrganize{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon{
+    width: 15px;
+    height: 100%;
+    color: black;
+}
+
+.ironLogo{
+    width: 40px;
+    height: 40px;
+}
+
