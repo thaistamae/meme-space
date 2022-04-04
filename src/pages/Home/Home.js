@@ -1,41 +1,32 @@
+import { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { Cards } from "../Cards/Cards";
+import { Cards } from "../../components/Cards/Cards";
+import style from "./Home.module.css";
 
-function CommentCard(props) {
+export function Home() {
   const [cards, setCards] = useState([]);
-
-  const [comentarios, setComentarios] = useState({ comments: [] });
-  const [posted, setPosted] = useState(false);
-  console.log(comentarios)
 
   // Pegar os dados dos cards no banco de dados e trazer para a array cards
 
   useEffect(() => {
-
-
     async function fetchCards() {
       try {
         const result = await axios.get("https://ironrest.herokuapp.com/memes");
         setCards([...result.data.reverse()]);
-        setComentarios({ ...result.data.comments });
-        setPosted(false)
-        console.log(posted)
       } catch (error) {
         console.error(error);
       }
     }
 
     fetchCards();
-  }, [posted]);
-  console.log(setPosted)
-  return (
-    <div>
+  }, [setCards]);
 
-      {/*renderizar cada elemento da array Card*/}
+  return (
+    <div className={style.home}>
       {cards.map((card) => {
         return (
           <Cards
+            className={style.cards}
             key={card._id}
             logo={card.logo}
             name={card.name}
@@ -46,9 +37,7 @@ function CommentCard(props) {
             category={card.category}
             likes={card.likes}
             id={card._id}
-            postedState={setPosted}
             local={card.local}
-            currentTime={card.currentTime}
           />
         );
       })}
@@ -56,4 +45,4 @@ function CommentCard(props) {
   );
 }
 
-export default CommentCard;
+export default Home;
