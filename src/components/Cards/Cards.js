@@ -32,7 +32,7 @@ function Cards(props) {
     const hour = date.getHours();
     const minutes = date.getMinutes();
 
-    printDate = `${hour}:${minutes} - ${day} DE ${monthPtBr[month]} DE ${year}`;
+    printDate = `${hour}:${minutes > 9 ? minutes : "0"+minutes} - ${day} DE ${monthPtBr[month]} DE ${year}`;
     return printDate;
   }
 

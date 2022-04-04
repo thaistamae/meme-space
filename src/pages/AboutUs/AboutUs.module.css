@@ -1,5 +1,6 @@
-.footerOrganize{
+.generalOrganize{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     background-color: white;
 }
@@ -8,30 +9,75 @@
     display: flex;
     justify-content: space-evenly;
     background-color: white;
+    width: 450px;
 }
 
+p{
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+}
 
 .iconOrganize{
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-evenly;
+    padding: 10px;
     font-size: 24px;
 }
 
+.box{
+    width: 200px;
+    }
+
 .icon{
-    width: 15px;
+    width: 30px;
     height: 100%;
     color: black;
 }
 
 .ironLogo{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: auto;
 }
 
-.profiles{
-    border-radius: 14px;
-    background-color:grey;
+.profiles1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
     padding: 20px;
+    box-shadow: rgba(0,0,0,0.35) 0px 2px 5px;
+    width: 100vw;
+    height: 380px;
+    margin-bottom:20px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top:0;
+}
 
+
+
+.profiles2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    background-color: white;
+    padding: 20px;
+    width: 100vw;
+    height: 200px;
+    margin-bottom: 0;
+}
+
+
+.text{
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+}
+
+.tech{
+    padding: 10px;
 }

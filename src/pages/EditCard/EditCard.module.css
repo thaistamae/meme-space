@@ -1,0 +1,391 @@
+button{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+div{font-family:Verdana, Geneva, Tahoma, sans-serif;}
+
+.formBackground{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+
+@media screen and (min-width: 769px ){
+
+
+.formContainer2{
+    width: 700px;
+    height: 450px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 0;
+    margin-top: 50px;
+}
+
+.titleOrganize{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 0 15px 0 15px;
+    font-size: 14px;
+}
+
+.textButton{
+    background-color: white;
+    border: black;
+    outline: none;
+    height: 100%;
+    color: #0095f6;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.textButtonDisabled{
+    background-color: white;
+    border: black;
+    outline: none;
+    height: 100%;
+    color: lightgrey;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.formInputs2{
+    display: flex;
+    flex-direction: column;    
+    justify-content: flex-start;
+    width: 400px;
+    margin-top: 20px;
+    padding: 0 0 0 15px;
+}
+
+
+.step3{
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 15px 0 15px;
+}
+
+.logo2{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0 10px 0 10px;
+}
+
+.profileStep3{
+    display:flex;
+}
+
+label{
+    padding-bottom: 7px;
+}
+
+.inputDescription{
+    margin-bottom: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+    border: lightgray;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+
+}
+
+input{
+    margin-bottom: 10px;
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+    border: lightgray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.cards2{
+    width: 320px;
+    height: 320px;
+}
+
+
+.obrigatorio{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15px;
+    font-size: 10px;
+}
+
+.selectInput{
+    padding: 8px;
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+    border: lightgray;
+}
+
+
+.selectInput2{
+    margin: 5px 0 10px 0;
+    padding: 8px;
+    box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+    border: lightgray;
+    background-color: #F5F5F5;
+    font-size: 12px;
+}
+
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px ){
+    
+    .formContainer2{
+        width: 460px;
+        height: 460px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 0;
+        margin-top: 50px;
+    }
+    
+    .titleOrganize{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid lightgrey;
+        padding: 0 15px 0 15px;
+        font-size: 14px;
+    }
+    
+    .textButton{
+        background-color: white;
+        border: black;
+        outline: none;
+        height: 100%;
+        color: #0095f6;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    .textButtonDisabled{
+        background-color: white;
+        border: black;
+        outline: none;
+        height: 100%;
+        color: lightgrey;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    
+    
+    .formInputs2{
+        display: flex;
+        flex-direction: column;    
+        justify-content: flex-start;
+        width: 400px;
+        margin-top: 20px;
+        padding: 0 0 0 15px;
+    }
+    
+    
+    .step3{
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 15px 0 15px;
+    }
+    
+    
+    .logo2{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        padding: 0 10px 0 10px;
+    }
+    
+    .profileStep3{
+        display:flex;
+    }
+    
+    label{
+        padding-bottom: 7px;
+    }
+    
+    .inputDescription{
+        margin-bottom: 10px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+        padding-top: 10px;
+        padding-bottom: 70px;
+        padding-left: 10px;
+    
+    }
+    
+    input{
+        margin-bottom: 10px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+    .cards2{
+        width: 200px;
+        height: 200px;
+    }
+    
+    
+    .obrigatorio{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+        font-size: 10px;
+    }
+
+    .selectInput{
+        padding: 8px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+    }
+
+    .selectInput2{
+        margin: 5px 0 10px 0;
+        padding: 8px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+        background-color: #F5F5F5;
+        font-size: 12px;
+    }
+    
+    }
+    
+
+@media screen and (max-width: 480px){
+    
+    .formContainer2{
+        width: 310px;
+        height: 550px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+    
+    .titleOrganize{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid lightgrey;
+        padding: 0 15px 0 15px;
+        font-size: 12px;
+    }
+    
+    .textButton{
+        background-color: white;
+        border: black;
+        outline: none;
+        height: 100%;
+        color: #0095f6;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    .textButtonDisabled{
+        background-color: white;
+        border: black;
+        outline: none;
+        height: 100%;
+        color: lightgrey;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    
+    .formInputs2{
+        display: flex;
+        flex-direction: column;  
+        width: 260px;
+        margin-top: 20px;
+        padding: 0 0 0 10px;
+        font-size: 12px;
+    }
+    
+    
+    .step3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 15px 0 15px;
+    }
+    
+    .logo2{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 0 10px 0 10px;
+    }
+    
+    .profileStep3{
+        display:flex;
+    }
+    
+    label{
+        padding-bottom: 7px;
+    }
+    
+    .inputDescription{
+        margin-bottom: 10px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+    
+    }
+    
+    input{
+        margin-bottom: 10px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    
+
+    .cards2{
+        width: 150px;
+        height: 150px;
+    }
+    
+    
+    .obrigatorio{
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15px;
+        font-size: 10px;
+    }
+    
+    .selectInput{
+        padding: 8px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+    }
+
+    .selectInput2{
+        margin: 5px 0 10px 0;
+        padding: 8px;
+        box-shadow: rgba(0,0,0,0.35) 0px 1px 0.7px;
+        border: lightgray;
+        background-color: #F5F5F5;
+        font-size: 12px;
+    }
+    }
