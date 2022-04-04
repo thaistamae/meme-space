@@ -5,10 +5,8 @@ import { useState } from "react";
 
 function Cards(props) {
   const [comentarios, setComentarios] = useState({ comments: [] });
-  
+
   let printDate;
-
-
 
   function formatDate(dateStr) {
     const monthPtBr = [
@@ -32,7 +30,9 @@ function Cards(props) {
     const hour = date.getHours();
     const minutes = date.getMinutes();
 
-    printDate = `${hour}:${minutes > 9 ? minutes : "0"+minutes} - ${day} DE ${monthPtBr[month]} DE ${year}`;
+    printDate = `${hour}:${minutes > 9 ? minutes : "0" + minutes} - ${day} DE ${
+      monthPtBr[month]
+    } DE ${year}`;
     return printDate;
   }
 
@@ -54,7 +54,7 @@ function Cards(props) {
       .then(() => {
         console.log("fezPush");
         props.postedState(true);
-        console.log(props.postedState)
+        console.log(props.postedState);
       })
       .catch((error) => console.log(error));
   };
@@ -112,16 +112,14 @@ function Cards(props) {
           </div>
 
           <form onSubmit={handleSubmit}>
-            
-              <input
-                type="text"
-                className={styles.text}
-                placeholder="Adicionar comentário"
-                name="comments"
-                onChange={handleChange}
-              />
-            
-            <button type="submit">add</button>{" "}
+            <input
+              type="text"
+              className={styles.text}
+              placeholder="Adicionar comentário"
+              name="comments"
+              onChange={handleChange}
+            />
+            <button type="submit">Add</button>{" "}
           </form>
         </div>
         <h5 className={styles.postTime}>{formattedDate}</h5>

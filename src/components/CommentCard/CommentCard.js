@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Cards } from "../Cards/Cards";
-import { Navbar } from "../Navbar/Navbar";
 
 function CommentCard(props) {
   const [cards, setCards] = useState([]);
@@ -13,7 +12,7 @@ function CommentCard(props) {
   // Pegar os dados dos cards no banco de dados e trazer para a array cards
 
   useEffect(() => {
-    
+
 
     async function fetchCards() {
       try {
@@ -32,7 +31,6 @@ function CommentCard(props) {
   console.log(setPosted)
   return (
     <div>
-      <Navbar />
 
       {/*renderizar cada elemento da array Card*/}
       {cards.map((card) => {

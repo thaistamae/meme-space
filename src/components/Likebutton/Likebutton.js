@@ -1,4 +1,4 @@
-import { LikeButton } from '@lyket/react';
+import { LikeButton } from "@lyket/react";
 
 const Faq = () => {
   return (
@@ -14,19 +14,17 @@ const Faq = () => {
           totalLikes,
           userLiked,
           isLoading,
-          isCounterVisible
+          isCounterVisible,
         }) => (
           <>
-            <button onClick={handlePress} disabled={isLoading}>
-              
-            </button>
+            <button onClick={handlePress} disabled={isLoading}></button>
             {isCounterVisible && <div>Likes: {totalLikes}</div>}
             {userLiked && <div></div>}
           </>
         )}
       </LikeButton>
     </>
-  )
+  );
 };
 
-export {Faq}
+export { Faq };
