@@ -167,7 +167,7 @@ export default function Form() {
                   />
                 </section>
                 <section className={styles.obrigatorio}>
-                  <p>* Campos obrigatórios</p>
+                  <p className={styles.obrigatorio}>* Campos obrigatórios</p>
                 </section>
               </div>
             ) : null}
