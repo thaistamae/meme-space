@@ -1,8 +1,15 @@
-button {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
 }
+
+button {
+  font-family: "Ubuntu", sans-serif;
+}
+
 div {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .formBackground {
