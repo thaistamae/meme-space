@@ -14,8 +14,143 @@ body {
   margin-top: 50px;
 }
 
+@media screen and (min-width: 769px) {
+  .card {
+    width: 550px;
+    min-height: 400px;
+    background: #fff;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card .top .userDetails {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card .top .userDetails .profileImg {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+  
+  .cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card .top .userDetails h3 {
+    font-size: 16px;
+    color: #4d4d4f;
+    font-weight: 500;
+    line-height: 1em;
+  }
+  
+  .card .top .userDetails h3 span {
+    font-size: 0.75em;
+  }
+  
+  .dot {
+    transform: scale(0.6);
+    cursor: pointer;
+  }
+  .imgBx {
+    width: 100%;
+    height: 500px;
+    margin: 10px 0 15px;
+  }
+  
+  .actionBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .actionBtns img {
+    max-width: 24px;
+    cursor: pointer;
+  }
+  
+  .actionBtns .left img {
+    margin-right: 8px;
+  }
+  
+  .likes {
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #4d4d4f;
+  }
+  
+  .message {
+    font-weight: 400;
+    margin-top: 5px;
+    color: #777;
+    line-height: 1.5em;
+  }
+  
+  .message b {
+    color: #262626;
+  }
+  
+  .comments {
+    margin-top: 10px;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 0.945);
+    font-size: 15px;
+  }
+  
+  .addComments {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .addComments .userImg {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+  
+  .text {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #262626;
+  }
+  
+  .text::placeholder {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .postTime {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #777;
+  }
+  }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
 .card {
-  width: 550px;
+  width: 400px;
   min-height: 400px;
   background: #fff;
   border: 1px solid lightgray;
@@ -68,7 +203,7 @@ body {
 }
 .imgBx {
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin: 10px 0 15px;
 }
 
@@ -145,3 +280,139 @@ body {
   font-weight: 500;
   color: #777;
 }
+}
+
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 350px;
+    min-height: 350px;
+    background: #fff;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card .top .userDetails {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card .top .userDetails .profileImg {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+  
+  .cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card .top .userDetails h3 {
+    font-size: 16px;
+    color: #4d4d4f;
+    font-weight: 500;
+    line-height: 1em;
+  }
+  
+  .card .top .userDetails h3 span {
+    font-size: 0.75em;
+  }
+  
+  .dot {
+    transform: scale(0.6);
+    cursor: pointer;
+  }
+  .imgBx {
+    width: 100%;
+    height: 350px;
+    margin: 10px 0 15px;
+  }
+  
+  .actionBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .actionBtns img {
+    max-width: 24px;
+    cursor: pointer;
+  }
+  
+  .actionBtns .left img {
+    margin-right: 8px;
+  }
+  
+  .likes {
+    font-weight: 500;
+    margin-top: 0px;
+    font-size: 16px;
+    color: #4d4d4f;
+  }
+  
+  .message {
+    font-weight: 400;
+    margin-top: 0px;
+    color: #777;
+    line-height: 1.5em;
+  }
+  
+  .message b {
+    color: #262626;
+  }
+  
+  .comments {
+    margin-top: 0px;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 0.945);
+    font-size: 15px;
+  }
+  
+  .addComments {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+  }
+  
+  .addComments .userImg {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 8px;
+  }
+  
+  .text {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #262626;
+  }
+  
+  .text::placeholder {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .postTime {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #777;
+  }
+  }
