@@ -2,10 +2,25 @@ import { Link } from "react-router-dom";
 import { GrAddCircle } from "react-icons/gr";
 import { GrStatusInfo } from "react-icons/gr";
 import { GrHomeRounded } from "react-icons/gr";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import style from "./Navbar.module.css";
 import logo from "../../assets/images/logo.png";
+import {ShareButton} from "../ShareButton/ShareButton";
+import {useState} from "react";
 
 export function Navbar() {
+
+  const [shareButton, setShareButton] = useState(false);
+
+  function appearDropDownList(){
+    if(shareButton == false){
+      setShareButton(true);
+    }else {
+      setShareButton(false);
+    }
+  }  
+
+
   return (
     <div className={style.navBar}>
       <div className={style.organize}>
@@ -32,21 +47,17 @@ export function Navbar() {
                 <GrStatusInfo size={25} />
               </Link>
             </li>
-          </ul>
-
-          <div className={style.container}>
-            <div className={style.list}>
-              {/*<li> <Link to="/meme"> Memes</Link></li>
-                                <li> <Link to="/meme/turma">Turma</Link> </li>
-                                <li><Link to="/meme/externo">Externo</Link></li>*/}
-            </div>
-          </div>
+            <li>
+              <button onClick={appearDropDownList}>
+               <AiOutlineUsergroupAdd size={25}/>          
+               </button> 
+               <div>{shareButton ? <ShareButton/> : null}</div>
+            </li>
+          </ul>  
         </div>
+        
       </div>
 
-      <div className={style.mainContainer}>
-        {/*Colocar o conteudo para ficar no site aqui */}
-      </div>
     </div>
   );
 }

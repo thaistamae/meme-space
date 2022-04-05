@@ -1,0 +1,39 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container1 {
+  position: absolute;
+  top: 55px;
+  width: 150px;
+  transform: translateX(-45%);
+  align-items: center;
+  height: 70px;
+  border: 1px lightgray solid;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+  padding: 5px;
+}
+
+.close{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+
+.list {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+}

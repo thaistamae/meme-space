@@ -14,71 +14,89 @@
   padding-top: 2px;
 }
 
-@media screen and (min-width: 769px) {.organize {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 200px;
-  align-items: center;
+@media screen and (min-width: 769px) {
+  .organize {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 200px;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 25px;
+    width: auto;
+    margin-left: 200px;
+  }
+
+  button {
+    background-color: white;
+    border: none;
+  }
 }
 
-.menu {
-  display: flex;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .organize {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 25px;
+    width: auto;
+    margin-left: 30px;
+  }
+
+  button {
+    background-color: white;
+    border: none;
+  }
 }
 
-li {
-  list-style-type: none;
-  padding: 10px;
-}
+@media screen and (max-width: 480px) {
+  .organize {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    align-items: center;
+  }
 
-.logo {
-  height: 25px;
-  width: auto;
-  margin-left: 200px;
-}
-}
+  .menu {
+    display: flex;
+  }
 
-@media screen and (min-width: 481px) and (max-width: 768px) {.organize {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 30px;
-  align-items: center;
-}
+  li {
+    list-style-type: none;
+    padding: 10px;
+  }
 
-.menu {
-  display: flex;
-}
+  .logo {
+    height: 25px;
+    width: auto;
+    margin-left: 10px;
+  }
 
-li {
-  list-style-type: none;
-  padding: 10px;
-}
-
-.logo {
-  height: 25px;
-  width: auto;
-  margin-left: 30px;
-}
-}
-
-@media screen and (max-width: 480px) {.organize {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 10px;
-  align-items: center;
-}
-
-.menu {
-  display: flex;
-}
-
-li {
-  list-style-type: none;
-  padding: 10px;
-}
-
-.logo {
-  height: 25px;
-  width: auto;
-  margin-left: 10px;
-}
+  button {
+    background-color: white;
+    border: none;
+  }
 }
