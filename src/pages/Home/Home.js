@@ -6,8 +6,6 @@ import style from "./Home.module.css";
 export function Home() {
   const [cards, setCards] = useState([]);
 
-  // Pegar os dados dos cards no banco de dados e trazer para a array cards
-
   useEffect(() => {
     async function fetchCards() {
       try {

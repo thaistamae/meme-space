@@ -5,21 +5,19 @@ import { GrHomeRounded } from "react-icons/gr";
 import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import style from "./Navbar.module.css";
 import logo from "../../assets/images/logo.png";
-import {ShareButton} from "../ShareButton/ShareButton";
-import {useState} from "react";
+import { ShareButton } from "../ShareButton/ShareButton";
+import { useState } from "react";
 
 export function Navbar() {
-
   const [shareButton, setShareButton] = useState(false);
 
-  function appearDropDownList(){
-    if(shareButton == false){
+  function appearDropDownList() {
+    if (shareButton == false) {
       setShareButton(true);
-    }else {
+    } else {
       setShareButton(false);
     }
-  }  
-
+  }
 
   return (
     <div className={style.navBar}>
@@ -49,15 +47,13 @@ export function Navbar() {
             </li>
             <li>
               <button onClick={appearDropDownList}>
-               <AiOutlineUsergroupAdd size={25}/>          
-               </button> 
-               <div>{shareButton ? <ShareButton/> : null}</div>
+                <AiOutlineUsergroupAdd size={25} />
+              </button>
+              <div >{shareButton ? <ShareButton/> : null}</div>
             </li>
-          </ul>  
+          </ul>
         </div>
-        
       </div>
-
     </div>
   );
 }
