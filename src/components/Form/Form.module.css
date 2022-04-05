@@ -216,9 +216,9 @@ div {
   .formContainer1 {
     width: 460px;
     height: 460px;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px lightgray solid;
     display: flex;
     flex-direction: column;
     padding: 0 0 0 0;
@@ -390,9 +390,9 @@ div {
   .formContainer1 {
     width: 310px;
     height: 470px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px lightgray solid;
     display: flex;
     flex-direction: column;
     padding: 0 0 0 0;
